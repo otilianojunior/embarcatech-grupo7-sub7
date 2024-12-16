@@ -1,7 +1,3 @@
-Aqui está a versão revisada e melhorada do README:
-
----
-
 # EmbarcaTech - Grupo 7 | Subgrupo 7  
 
 Repositório destinado às atividades e desafios do programa **EmbarcaTech**, incluindo projetos, práticas e soluções desenvolvidas durante o curso.
