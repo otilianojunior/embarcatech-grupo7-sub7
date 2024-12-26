@@ -1,36 +1,38 @@
+#include "conversor_unidade_volume.h"
 #include <stdio.h>
 
 // Função para converter litros para mililitros
 double litroParaMililitro(double litros) {
-    return litros * 1000;
+    return litros * LITROS_POR_MILILITRO;
 }
 
 // Função para converter mililitros para litros
 double mililitroParaLitro(double mililitros) {
-    return mililitros / 1000;
+    return mililitros * MILILITROS_POR_LITRO;
 }
 
 // Função para converter litros para metros cúbicos
 double litroParaMetroCubico(double litros) {
-    return litros / 1000;
+    return litros * LITROS_POR_METRO_CUBICO;
 }
 
 // Função para converter metros cúbicos para litros
 double metroCubicoParaLitro(double metrosCubicos) {
-    return metrosCubicos * 1000;
+    return metrosCubicos * METROS_CUBICOS_POR_LITRO;
 }
 
 // Função para converter mililitros para metros cúbicos
 double mililitroParaMetroCubico(double mililitros) {
-    return mililitros / 1000000;
+    return mililitros * MILILITROS_POR_METRO_CUBICO;
 }
 
 // Função para converter metros cúbicos para mililitros
 double metroCubicoParaMililitro(double metrosCubicos) {
-    return metrosCubicos * 1000000;
+    return metrosCubicos * METROS_CUBICOS_POR_MILILITRO;
 }
 
-int main() {
+// Função para interagir com o usuário e realizar as conversões
+void executarConversorVolume() {
     int opcao;
     double valor, resultado;
 
@@ -76,6 +78,4 @@ int main() {
             printf("Opção inválida!\n");
             break;
     }
-
-    return 0;
 }
