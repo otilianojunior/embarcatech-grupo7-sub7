@@ -13,6 +13,11 @@ void executarConversorArea() {
     printf("Opcao: ");
     scanf("%d", &from_unit);
 
+    if (from_unit != 1 && from_unit != 2) {
+        printf("\nUnidade de entrada inválida!\n");
+        return;
+    }
+
     printf("\nDigite o valor a ser convertido: ");
     scanf("%lf", &input_value);
 
@@ -22,15 +27,16 @@ void executarConversorArea() {
     printf("Opcao: ");
     scanf("%d", &to_unit);
 
+    if (to_unit != 1 && to_unit != 2) {
+        printf("\nUnidade de saída inválida!\n");
+        return;
+    }
+
     switch (from_unit) {
         case 1: // Metros quadrados
             if (to_unit == 1) result = input_value; // m² para m²
             else if (to_unit == 2) 
                 result = input_value * METROS_QUADRADOS_PARA_CENTIMETROS_QUADRADOS; // m² para cm²
-            else { 
-                printf("\nUnidade de saída inválida!\n"); 
-                return; 
-            }
             break;
 
         case 2: // Centímetros quadrados
@@ -38,14 +44,10 @@ void executarConversorArea() {
                 result = input_value * CENTIMETROS_QUADRADOS_PARA_METROS_QUADRADOS; // cm² para m²
             else if (to_unit == 2) 
                 result = input_value; // cm² para cm²
-            else { 
-                printf("\nUnidade de saída inválida!\n"); 
-                return; 
-            }
             break;
 
         default:
-            printf("\nUnidade de entrada inválida!\n");
+            printf("\nErro inesperado!\n");
             return;
     }
 
